@@ -18,7 +18,7 @@ public class SimpleFileReader {
 	 * @param path ファイルの場所
 	 */
 	public void readTextFile(String path) {
-		// Javaのクラスにはそれぞれ「役割」があります。「役割」を意識すると
+		// Javaのクラスにはそれぞれ「役割」があります。「役割」を意識すると覚えやすく、コードが読みやすくなる
 		// BufferedReaderはテキストを効率的に読み込むために使用するクラス。
 		// FileReaderはファイルを読み込むために使用するクラス。
 		try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))){
@@ -51,9 +51,9 @@ public class SimpleFileReader {
 	 */
 	public void writeTextFile(String path) {
 		// ワンモアマイル。中身を書いてください
-		// Javaのクラスにはそれぞれ「役割」があります。「役割」を意識すると
-		// BufferedWriterはテキストを効率的に読み込むために使用するクラス。
-		// FileWriterはファイルを読み込むために使用するクラス。
+		// Javaのクラスにはそれぞれ「役割」があります。「役割」を意識すると覚えやすく、コードが読みやすくなる
+		// BufferedWriterはテキストを効率的に書き込むために使用するクラス。
+		// FileWriterはファイルを書き込むために使用するクラス。
 		try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path))){
 			for (String line : this.lines) {
 				// 一行分のデータをファイルに書き出す

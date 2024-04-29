@@ -30,8 +30,12 @@ public class StringUtility {
 			// 配列の中に十分な要素数があることを確かめる。
 			if (userData.length >= 4) {
 				// String型配列から各要素を取り出し、変数を宣言してそれに格納
+				// でもどのデータもそのままでは使えない
+				// IDデータ：スペースが前後に入っていたら、int型に変換できない
 				String rawid = userData[0];
+				// 名前データ：スペースが前後に入っていたり、"が混ざっていると良くない
 				String rawName = userData[1];
+				// 年齢データ：スペースが前後に入っていたら、int型に変換できない
 				String rawage = userData[2];
 				
 				// 演習３．２：名前には"が入ってしまっている。"を除去（例：replaceメソッド？）
