@@ -14,7 +14,11 @@ public class ReadWriteObjects {
 		// 演習１：このプログラムはJavaのオブジェクトをファイルに書き込むものです。
 		//   でも例外が出てしまいます。例外が出ずにObjectのデータがファイル出力されるように
 		//   修正してください。
+		
+		// 車２台分のデータ（CarとPrius）の情報をファイルに書き込む
 		writeTwoCarsToFile("twocars.obj", new Car(), new Prius());
+		
+		// 先ほどファイルに書き込んだデータをJavaのオブジェクトに作り直す
 		readTwoCarsToFile("twocars.obj");
 		
 		// 演習１のワンモアマイル：CarクラスやPriusクラスに変数やメソッドを定義して、ファイルに書き込んでください。
@@ -29,7 +33,7 @@ public class ReadWriteObjects {
 			objectStream.writeObject(secondCar);
 		}
 		catch (IOException exception) {
-			
+			exception.printStackTrace();
 		}
 	}
 
